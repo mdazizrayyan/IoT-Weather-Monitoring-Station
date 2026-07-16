@@ -1,0 +1,69 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="900" height="560" fill="#0b1220"/>
+  <text x="450" y="32" text-anchor="middle" fill="#f1f5f9" font-size="20" font-weight="bold">Circuit / Wiring Diagram</text>
+
+  <!-- Raspberry Pi block -->
+  <rect x="370" y="70" width="160" height="420" rx="10" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+  <text x="450" y="95" text-anchor="middle" fill="#f0fdf4" font-size="14" font-weight="bold">Raspberry Pi</text>
+  <text x="450" y="112" text-anchor="middle" fill="#bbf7d0" font-size="10">GPIO Header</text>
+
+  <!-- Pi pin labels -->
+  <g fill="#dcfce7" font-size="10">
+    <text x="450" y="140">3.3V (Pin 1)</text>
+    <text x="450" y="160">GND (Pin 6)</text>
+    <text x="450" y="180">SDA / GPIO2 (Pin 3)</text>
+    <text x="450" y="200">SCL / GPIO3 (Pin 5)</text>
+    <text x="450" y="220">GPIO4 (Pin 7) — 1-Wire</text>
+    <text x="450" y="240">GPIO27 (Pin 13) — Wind Speed</text>
+    <text x="450" y="260">GPIO17 (Pin 11) — Rain Gauge</text>
+    <text x="450" y="280">SPI0: GPIO8/9/10/11 — ADC</text>
+  </g>
+
+  <!-- BME280 -->
+  <rect x="60" y="80" width="150" height="55" rx="6" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="135" y="102" text-anchor="middle" fill="#e2e8f0" font-size="12">BME280</text>
+  <text x="135" y="118" text-anchor="middle" fill="#94a3b8" font-size="9">I2C: SDA/SCL/3.3V/GND</text>
+  <path d="M210 100 L370 140" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
+  <path d="M210 115 L370 180" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
+
+  <!-- DS18B20 -->
+  <rect x="60" y="150" width="150" height="55" rx="6" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="135" y="172" text-anchor="middle" fill="#e2e8f0" font-size="12">DS18B20</text>
+  <text x="135" y="188" text-anchor="middle" fill="#94a3b8" font-size="9">1-Wire + 4.7kΩ pull-up</text>
+  <path d="M210 178 L370 220" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
+
+  <!-- Anemometer -->
+  <rect x="60" y="220" width="150" height="55" rx="6" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="135" y="242" text-anchor="middle" fill="#e2e8f0" font-size="12">Anemometer</text>
+  <text x="135" y="258" text-anchor="middle" fill="#94a3b8" font-size="9">Reed switch → GPIO27</text>
+  <path d="M210 248 L370 240" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
+
+  <!-- Rain gauge -->
+  <rect x="60" y="290" width="150" height="55" rx="6" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="135" y="312" text-anchor="middle" fill="#e2e8f0" font-size="12">Rain Gauge</text>
+  <text x="135" y="328" text-anchor="middle" fill="#94a3b8" font-size="9">Reed switch → GPIO17</text>
+  <path d="M210 318 L370 260" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
+
+  <!-- Wind vane + MCP3008 -->
+  <rect x="60" y="360" width="150" height="55" rx="6" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="135" y="382" text-anchor="middle" fill="#e2e8f0" font-size="12">Wind Vane</text>
+  <text x="135" y="398" text-anchor="middle" fill="#94a3b8" font-size="9">Analog output → MCP3008 CH0</text>
+  <path d="M210 388 L280 388" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
+
+  <rect x="280" y="360" width="90" height="55" rx="6" fill="#4c1d95" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="325" y="382" text-anchor="middle" fill="#ede9fe" font-size="11">MCP3008</text>
+  <text x="325" y="398" text-anchor="middle" fill="#c4b5fd" font-size="9">ADC (SPI)</text>
+  <path d="M370 388 L370 280" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
+
+  <!-- Power supply -->
+  <rect x="640" y="220" width="150" height="55" rx="6" fill="#78350f" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="715" y="242" text-anchor="middle" fill="#fff7ed" font-size="12">Power Supply</text>
+  <text x="715" y="258" text-anchor="middle" fill="#fed7aa" font-size="9">5V/3A USB-C</text>
+  <path d="M640 245 L530 245" stroke="#fb923c" stroke-width="1.5" fill="none"/>
+
+  <!-- Breadboard note -->
+  <rect x="640" y="300" width="150" height="55" rx="6" fill="#374151" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="715" y="322" text-anchor="middle" fill="#f3f4f6" font-size="12">Breadboard</text>
+  <text x="715" y="338" text-anchor="middle" fill="#d1d5db" font-size="9">Common power rails</text>
+  <path d="M640 325 L530 260" stroke="#9ca3af" stroke-width="1.5" fill="none"/>
+</svg>
